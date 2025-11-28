@@ -118,7 +118,8 @@ a:hover, a:focus {
 
 /* --- 5. Home Section (Hero) --- */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('placeholder-background.jpg') no-repeat center center/cover;
+    /* UPDATED: Using sunsetWallpaper.jpg */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sunsetWallpaper.jpg') no-repeat center center/cover;
     background-size: cover;
     display: flex;
     align-items: center;

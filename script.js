@@ -29,19 +29,34 @@ navLinks.addEventListener('click', (e) => {
 });
 
 // --- JS Feature 2: Typing Effect for Home Greeting ---
-const greetingPrefix = "Hello, I'm";
+// CHANGED: Simplified to directly set the target text.
+const targetGreeting = "Hello, I'm Haziq"; // Corrected greeting
 const typingSpeed = 50; // ms
 let charIndex = 0;
 
 function typeWriter() {
-    if (charIndex < greetingPrefix.length) {
-        typingTextElement.textContent += greetingPrefix.charAt(charIndex);
+    // If the element already contains "Hello, I'm", append " Haziq"
+    if (typingTextElement.textContent.trim() === "Hello, I'm") {
+        const haziqPart = targetGreeting.substring(typingTextElement.textContent.length);
+        if (charIndex < haziqPart.length) {
+            typingTextElement.textContent += haziqPart.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, typingSpeed);
+        }
+    } else if (charIndex < targetGreeting.length) { // For initial load or if text is empty
+        typingTextElement.textContent = targetGreeting.substring(0, charIndex + 1);
         charIndex++;
         setTimeout(typeWriter, typingSpeed);
     }
 }
-// Start the effect when the page loads
-window.addEventListener('load', typeWriter);
+
+// Set initial text to "Hello, I'm" then trigger typing for " Haziq"
+window.addEventListener('load', () => {
+    typingTextElement.textContent = "Hello, I'm";
+    // Reset charIndex for the " Haziq" part
+    charIndex = 0; 
+    setTimeout(typeWriter, typingSpeed);
+});
 
 
 // --- JS Feature 3: Project Image Modal (Viewer) ---
