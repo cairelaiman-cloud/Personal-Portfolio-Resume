@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohd Haziq | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👟</text></svg>">
@@ -25,8 +25,19 @@
 
     <main>
         <section id="home" class="hero-section">
-            <div class="hero-content">
-                <p class="greeting" id="typing-text">Hello, I'm</p> <h1>MOHD HAZIQ BIN ANUAR</h1>
+
+            <!-- 🔥 Background Video -->
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="sea_sunset.mp4" type="video/mp4">
+            </video>
+
+            <!-- 🔥 Gradient Overlay -->
+            <div class="hero-overlay"></div>
+
+            <!-- 🔥 Animated Text -->
+            <div class="hero-content fade-in">
+                <p class="greeting" id="typing-text">Hello, I'm</p>
+                <h1>MOHD HAZIQ BIN ANUAR</h1>
                 <p class="subtitle">IT Student | Database Enthusiast | UI/UX Surveyor</p>
                 <a href="#projects" class="cta-button">View My Work</a>
             </div>
@@ -37,26 +48,25 @@
             <p class="section-description">Showcasing my work in database management, HCI, and operating systems.</p>
 
             <div class="projects-grid">
-                
                 <article class="project-card" data-project-id="1">
                     <h3>Database Group Project</h3>
                     <p class="project-tag">#MySQL #Database #CarRental</p>
                     <p class="description">Developed a robust car rental database system using MySQL/phpMyAdmin. My primary task involved database manipulation and ensuring data integrity, specifically demonstrating current table states before modification.</p>
-                    <button class="view-image-btn" data-image-src="DatabaseProject.png" data-image-alt="Screenshot of MySQL Workbench showing current rows in an 'orders' table.">View Screenshot</button>
+                    <button class="view-image-btn" data-image-src="DatabaseProject.png" data-image-alt="Screenshot">View Screenshot</button>
                 </article>
 
                 <article class="project-card" data-project-id="2">
                     <h3>HCI - SMART App Usability</h3>
                     <p class="project-tag">#HCI #UXResearch #UsabilityScale</p>
-                    <p class="description">Conducted a comprehensive System Usability Scale (SUS) survey for a newly developed ART App interface. This involved data collection and analysis to measure user satisfaction among Kuching and Samarahan communities.</p>
-                    <button class="view-image-btn" data-image-src="SUSScale.png" data-image-alt="System Usability Scale (SUS) results showing scores for participants 6 through 10.">View SUS Results</button>
+                    <p class="description">Conducted a System Usability Scale (SUS) survey involving data collection and analysis to measure user satisfaction across communities.</p>
+                    <button class="view-image-btn" data-image-src="SUSScale.png" data-image-alt="System Usability Results">View SUS Results</button>
                 </article>
 
                 <article class="project-card" data-project-id="3">
                     <h3>Operating System - Scheduling Analysis</h3>
                     <p class="project-tag">#OperatingSystems #CPU #TimeQuantum</p>
-                    <p class="description">Analyzed the performance of CPU scheduling by charting the relationship between Time Quantum values and Average Turnaround/Waiting Times. The goal was to recommend an optimal quantum for a batch-processing workload.</p>
-                    <button class="view-image-btn" data-image-src="aveTurn.png" data-image-alt="Graph showing Average Turnaround Time and Average Waiting Time versus Time Quantum.">View Analysis Chart</button>
+                    <p class="description">Analyzed the performance of CPU scheduling by charting Time Quantum vs Turnaround/Waiting Times to recommend an optimal quantum.</p>
+                    <button class="view-image-btn" data-image-src="aveTurn.png" data-image-alt="Scheduling Chart">View Analysis Chart</button>
                 </article>
             </div>
         </section>
@@ -64,10 +74,10 @@
         <section id="about" class="section about-section">
             <div class="about-content">
                 <h2>👤 About Mohd Haziq</h2>
-                <p>I am Mohd Haziq Bin Anuar, an enthusiastic IT student focused on combining theoretical knowledge with practical, impactful projects. My academic work spans from intricate database design to crucial usability testing for user-centric applications.</p>
+                <p>I am an enthusiastic IT student focused on database design and usability testing. My academic work spans from SQL systems to user-centric interface evaluation.</p>
 
-                <p>Beyond the screen, I have a passion for collecting shoes, especially Nike. This hobby reflects my attention to detail, quality, and design—principles I carry into my code and projects.</p>
-                
+                <p>Outside of academics I love collecting shoes, especially Nike. The attention to detail in sneaker design inspires how I approach code and UI layouts.</p>
+
                 <div class="skills-container">
                     <h3>Technical Skills</h3>
                     <div class="skill-bar" data-skill-level="90">
@@ -83,7 +93,7 @@
                         <div class="bar-fill"></div>
                     </div>
                     <div class="skill-bar" data-skill-level="70">
-                        <span class="skill-name">OS Concepts & Scheduling</span>
+                        <span class="skill-name">OS Concepts</span>
                         <div class="bar-fill"></div>
                     </div>
                 </div>
@@ -92,39 +102,40 @@
 
         <section id="contact" class="section contact-section">
             <h2>📧 Get In Touch</h2>
-            <p>I'm currently seeking new opportunities and collaborations. Feel free to reach out!</p>
+            <p>I'm open to collaboration and new opportunities.</p>
             
-            <a href="mailto:99819@siswa.unimas.my" class="cta-button contact-link">Email Haziq Directly</a>
+            <a href="mailto:99819@siswa.unimas.my" class="cta-button contact-link">Email Me Directly</a>
             <p class="email-address">99819@siswa.unimas.my</p>
 
             <form id="contact-form" class="simple-contact-form">
                 <h3>Send a Quick Message (Front-End Only)</h3>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit" id="submit-btn">Send Message</button>
+                <label>Name</label>
+                <input type="text" id="name" required>
+
+                <label>Email</label>
+                <input type="email" id="email" required>
+
+                <label>Message</label>
+                <textarea id="message" rows="5" required></textarea>
+
+                <button type="submit" id="submit-btn">Send</button>
                 <p id="form-status" class="form-feedback"></p>
             </form>
         </section>
     </main>
 
-    <div id="image-modal" class="modal" aria-modal="true" role="dialog" aria-hidden="true">
+    <!-- Modal -->
+    <div id="image-modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" tabindex="0" role="button" aria-label="Close image viewer">&times;</span>
+            <span class="close-btn">&times;</span>
             <img id="modal-image" src="" alt="">
         </div>
     </div>
 
-    <button id="scrollToTopBtn" aria-label="Scroll to top of page" title="Go to top">↑</button>
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
 
     <footer>
-        <p>&copy; 2025 Mohd Haziq Bin Anuar. Built with 💖 and Vanilla JS.</p>
+        <p>&copy; 2025 Mohd Haziq Bin Anuar.</p>
     </footer>
 
     <script src="script.js"></script>
