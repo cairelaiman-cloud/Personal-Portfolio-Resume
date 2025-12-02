@@ -168,11 +168,18 @@ a:hover, a:focus {
     font-size: 4em;
     margin-top: 5px;
     color: white;
+    /* ADDED FONT CHANGE */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 2px;
 }
 
 .hero-content .greeting {
     font-size: 1.5em;
-    color: #f1c40f; /* Yellow */
+    /* COLOR CHANGED TO WHITE */
+    color: white; 
+    /* ADDED FONT CHANGE */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
 }
 
 .hero-content .subtitle {
@@ -387,7 +394,7 @@ a:hover, a:focus {
     cursor: pointer;
 }
 
-/* --- 10. Scroll-to-Top Button (JS Feature 6) --- */
+/* --- 10. Scroll-to-Top Button (JS Feature 6) */
 #scrollToTopBtn {
     display: none; 
     position: fixed;
